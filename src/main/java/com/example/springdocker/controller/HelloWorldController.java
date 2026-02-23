@@ -9,6 +9,6 @@ public class HelloWorldController {
 
     @GetMapping("/hello")
     public String sayHello(){
-        return "Webhook is enabled now";
+        return "This is dev pipeline";
     }
 }
