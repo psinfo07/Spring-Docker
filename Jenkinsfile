@@ -61,7 +61,7 @@ pipeline {
 
     // Optional: Deploy (replace with your actual deploy steps)
      stage('Deploy') {
-       when { branch 'main' }
+       // when { branch 'main' }
        steps {
          sh 'echo "Deploying ${IMAGE}:${IMAGE_TAG}..."'
          sh 'docker run -p 3002:3002 --name myapps ${IMAGE}:${IMAGE_TAG}'
