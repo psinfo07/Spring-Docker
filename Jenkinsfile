@@ -8,7 +8,7 @@ pipeline {
     IMAGE_TAG      = "${env.BUILD_NUMBER}"
     IMAGE_LATEST   = 'latest'
     DOCKER_CREDS   = 'docker-pat-prakash' // Jenkins credentials ID
-    JAVA_HOME      = tool(name: 'jdk21', type: 'hudson.model.JDK')
+    JAVA_HOME      = tool(name: 'jdk17', type: 'hudson.model.JDK')
     MAVEN_HOME     = tool(name: 'maven3', type: 'hudson.tasks.Maven$MavenInstallation')
     PATH           = "${MAVEN_HOME}/bin:${JAVA_HOME}/bin:${env.PATH}"
   }
