@@ -22,6 +22,7 @@ pipeline {
 
     stage('Build & Test') {
       steps {
+        sh 'java -version'
         sh 'mvn -version'
         sh 'mvn -B -e -DskipTests dependency:go-offline'
         // sh 'mvn -B -e clean verify'
