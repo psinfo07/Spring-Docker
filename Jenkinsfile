@@ -39,7 +39,7 @@ pipeline {
       steps {
         script {
           sh """
-            docker build -t ${IMAGE}:${IMAGE_TAG} .
+            docker build -t ${IMAGE}:${IMAGE_TAG} -t ${IMAGE}:${IMAGE_LATEST} .
           """
         }
       }
