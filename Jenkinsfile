@@ -13,12 +13,6 @@ pipeline {
     PATH           = "${MAVEN_HOME}/bin:${JAVA_HOME}/bin:${env.PATH}"
   }
 
-  options {
-    timestamps()
-    ansiColor('xterm')
-    buildDiscarder(logRotator(numToKeepStr: '25'))
-  }
-
   stages {
     stage('Checkout') {
       steps {
