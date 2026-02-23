@@ -70,6 +70,6 @@ pipeline {
   post {
     success { echo "Build ${env.BUILD_NUMBER} OK — image ${IMAGE}:${IMAGE_TAG}" }
     failure { echo "Build ${env.BUILD_NUMBER} FAILED" }
-    always  { cleanWs() }
+    //always  { cleanWs() }
   }
 }
