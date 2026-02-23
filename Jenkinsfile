@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     REGISTRY       = 'docker.io' // e.g., 'docker.io' or 'registry.example.com'
-    REPO           = 'pschpra/Spring-Docker'
+    REPO           = 'pschpra/spring-docker'
     IMAGE          = "${REPO}"
     IMAGE_TAG      = "${env.BUILD_NUMBER}"
     IMAGE_LATEST   = 'latest'
