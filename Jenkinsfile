@@ -26,11 +26,11 @@ pipeline {
         sh 'mvn -B -e -DskipTests dependency:go-offline'
         sh 'mvn -B -e clean verify'
       }
-      post {
-        always {
-          junit 'target/surefire-reports/*.xml'
-        }
-      }
+      //post {
+       // always {
+       //   junit 'target/surefire-reports/*.xml'
+        //}
+      //}
     }
 
     stage('Docker Build') {
