@@ -10,7 +10,7 @@ pipeline {
     DOCKER_CREDS   = 'docker-pat-prakash' // Jenkins credentials ID
     JAVA_HOME      = tool(name: 'jdk17', type: 'hudson.model.JDK')
     MAVEN_HOME     = tool(name: 'maven3', type: 'hudson.tasks.Maven$MavenInstallation')
-    PATH           = "${MAVEN_HOME}/bin:${JAVA_HOME}/bin:${env.PATH}"
+    PATH           = "${MAVEN_HOME}/bin:/usr/lib/jvm/java-17-openjdk-amd64/bin:${env.PATH}"
   }
 
   stages {
