@@ -4,7 +4,7 @@ pipeline {
   environment {
     REGISTRY       = 'docker.io' // e.g., 'docker.io' or 'registry.example.com'
     REPO           = 'pschpra/spring-docker'
-    IMAGE          = "${REPO}"
+    IMAGE          = "dev-${REPO}"
     IMAGE_TAG      = "${env.BUILD_NUMBER}"
     IMAGE_LATEST   = 'latest'
     DOCKER_CREDS   = 'docker-pat-prakash' // Jenkins credentials ID
@@ -64,7 +64,7 @@ pipeline {
        // when { branch 'main' }
        steps {
          sh 'echo "Deploying ${IMAGE}:${IMAGE_TAG}..."'
-         sh 'docker run -d -p 3002:3002 --name myapps ${IMAGE}:${IMAGE_TAG}'
+         sh 'docker run -d -p 3003:3002 --name myapps ${IMAGE}:${IMAGE_TAG}'
        }
      }
   }
