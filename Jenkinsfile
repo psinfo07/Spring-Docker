@@ -64,7 +64,7 @@ pipeline {
        // when { branch 'main' }
        steps {
          sh 'echo "Deploying ${IMAGE}:${IMAGE_TAG}..."'
-         sh 'docker run -d -p 3003:3002 --name myapps ${IMAGE}:${IMAGE_TAG}'
+         sh 'docker run -d -p 3003:3002 --name dev-myapps ${IMAGE}:${IMAGE_TAG}'
        }
      }
   }
