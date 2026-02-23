@@ -46,7 +46,7 @@ pipeline {
     }
 
     stage('Docker Login & Push') {
-      when { expression { return env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'master' } }
+      // when { expression { return env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'master' } }
       steps {
         withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDS, passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
           sh """
