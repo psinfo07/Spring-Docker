@@ -4,7 +4,7 @@ pipeline {
   environment {
     REGISTRY       = 'docker.io' // e.g., 'docker.io' or 'registry.example.com'
     REPO           = 'pschpra/spring-docker'
-    IMAGE          = "dev-${REPO}"
+    IMAGE          = "${REPO}"
     IMAGE_TAG      = "${env.BUILD_NUMBER}"
     IMAGE_LATEST   = 'latest'
     DOCKER_CREDS   = 'docker-pat-prakash' // Jenkins credentials ID
